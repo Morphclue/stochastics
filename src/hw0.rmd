@@ -1,0 +1,73 @@
+---
+title: "Homework 00"
+output:
+    pdf_document: default
+---
+
+```{r setup, include=FALSE, chache = F}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(error = TRUE)
+```
+
+\let\OldRule\rule
+\renewcommand{\rule}[2]{\OldRule{\linewidth}{#2}}
+
+----------
+
+# Task 1
+
+## Task 1.1
+
+### Task 1.1.c
+```{r}
+1 + 2
+```
+
+### Task 1.1.d
+```{r}
+(5 + 7) * 2 # Calculates (5+7)*2=24
+5 + 7 * 2 # Calculates 5+7*2=19 (* before +)
+1.5 * 2 # Calculates 1,5 * 2
+# 1,5*2 # Error because of comma. Should be a dot instead.
+2^3^4 # Calculates 2^(3^4) = 2^81
+(2^3)^4  # Calculates (2^3)^4 = 8^4
+exp(1) # Calculates e^1
+?exp # Calls help page for exp
+sqrt(9) # Calculates squareroot of 9.
+9^(1 / 2) # Calculates squareroot of 9 with ^1/2
+9^(0.5) #  Calculates squareroot of 9 with ^0.5 which is the same as ^1/2
+# Sqrt(9) # sqrt() is case sensitive
+```
+
+## Task 1.2
+
+### Task 1.2.a
+```{r}
+x <- 3
+y <- sqrt(x^3 + log(exp(3 * x)))
+```
+
+### Task 1.2.b
+```{r}
+x # Prints x
+y # Prints y
+X # Tries to print X, which does not exist
+x + y # Prints the sum of x and y
+x.prod <- x * y # Defines x.prod as a new variable x*y
+x.prod # Prints x.prod
+x.prod <- x.prod * x # Defines x.prod as x.prod*x -> 18*3=54
+ls() # Lists all variables of the current environment
+rm(x) # Removes the variable x from the current environment
+ls() # Lists all variables of the current environment again (x is now missing)
+```  
+
+### Task 1.2.c
+```{r}
+avenger.1 <- "Captain America" # "Captain America" is assigned to avenger.1 with type string
+avenger.2 <- "Thor" # "Thor" is assigned to avenger.2 with type string
+number <- 10  # Assignes 10 to number with type integer
+no.number <- "10" # Assignes "10" to no.number with type string
+number + 1 # Calculates and prints number + 1 = 10 + 1 = 11
+no.number + 1 # Tries to calculate and print no.number + 1
+# Fails because no.number is a string and not a number
+```
