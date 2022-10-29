@@ -89,3 +89,10 @@ Children[Children$Age < 8, c("Age", "TV")]
 mean(Children[Children$Smartphone == "Yes", "TV"])
 ```
 
+## Task 1.7
+
+### Task 1.7.a
+```{r}
+StudData <- data.frame(read.csv("data/BeispielStud.csv"))
+StudData$Interesse <- ordered(StudData$Interesse, levels = c("sehr hoch", "hoch", "mittel", "gering"))
+```
