@@ -13,3 +13,47 @@ knitr::opts_chunk$set(error = TRUE)
 \renewcommand{\rule}[2]{\OldRule{\linewidth}{#2}}
 
 ----------
+
+# Task 1
+
+## Task 1.5
+
+### Task 1.5.a
+```{r}
+x <- c(1, 10, 100, 1000)
+city <- c("Frankfurt", "Berlin", "New York", "Kassel")
+z <- c(0, 1, 2, 3)
+```
+
+### Task 1.5.b
+```{r}
+(x <- 7:12)
+(x <- 12:1)
+(x <- seq(-1, 1, 0.5))
+(y <- rep(-2:2, 2))
+z <- c(1, 2, 3, 4, 5, 5.1, 5.2, 5.3, 5.4, 5.5) # TODO: refactor
+```
+
+### Task 1.5.c
+```{r}
+x <- 10:8 # Numbers from 10 to 8
+y <- seq(0.0, 1.0, 0.2) # Numbers from 0.0 to 1.0 with step 0.2
+x + y # Adds x and y element-wise (x repeats itself)
+x * y # Multiplies x and y element-wise (x repeats itself)
+x^2 + 2 # Mulitples each element of x with itself and adds 2
+n <- length(x + y) # Length of x+y array
+sum(x + y) / n # Mean of x+y array
+```
+
+### Task 1.5.d
+```{r}
+x <- seq(0, 50, 2)
+y <- 50:1
+x[10] # 10th element of x
+y[c(1, 3, 10)] # 1st, 3rd and 10th element of y
+x[1:4] # First 4 elements of x
+x[x > 45] # Elements of x greater than 45
+x[x > 10 & x <= 20] # Elements of x greater than 10 and less or equal to 20
+y[y == 5 | y > 45 | y < 3] # Elements of y equal to 5 or greater than 45 or less than 3
+```
+
