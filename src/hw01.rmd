@@ -1,7 +1,7 @@
 ---
 title: "Homework 01"
 output:
-    pdf_document: default
+pdf_document: default
 ---
 
 ```{r setup, include=FALSE, chache = F}
@@ -57,3 +57,22 @@ x[x > 10 & x <= 20] # Elements of x greater than 10 and less or equal to 20
 y[y == 5 | y > 45 | y < 3] # Elements of y equal to 5 or greater than 45 or less than 3
 ```
 
+## Task 1.6
+
+### Task 1.6.a
+```{r}
+names <- factor(c("Michaela", "Alexander", "Nadja", "Alina", "Ricarda", "Omar"))
+age <- c(20, 20, 19, 21, 21, 20)
+numbers <- c(123451, 123452, 123453, 123454, 123455, 123456)
+grade <- ordered(c("A", "C", "C", "B-", "F", "A-"), levels = c("F", "C", "B-", "A-", "A"))
+passed <- grade > "F"
+Students <- data.frame(Name = names, Alter = age, Matr.nr = numbers, Note = grade, Pruefung.bestanden = passed)
+Students
+
+Students[1, 3] # 3rd element of 1st row
+Students[2,] # 2nd row
+Students[1:3, c(1, 4)] # 1st to 3rd row and 1st and 4th column
+Students[, 4] # 4th column
+Students$Note # 4th column
+Students[grade > "C",] # Rows with grade greater than C
+```
