@@ -1,7 +1,7 @@
 ---
 title: "Homework 01"
 output:
-pdf_document: default
+    pdf_document: default
 ---
 
 ```{r setup, include=FALSE, chache = F}
