@@ -84,7 +84,7 @@ age <- c(6, 8, 7, 10, 6, 7, 7, 9)
 gender <- c("Male", "Male", "Female", "Male", "Female", "Female", "Female", "Male")
 tv_time <- c(5, 10, 3, 15, 8, 9, 13, 8)
 smartphone <- c("No", "Yes", "No", "Yes", "Yes", "No", "Yes", "Yes")
-Children <- data.frame(Age = age, Gender = gender, TV = tv_time, Smartphone = smartphone)
+Children <- data.frame(Alter = age, Geschlecht = gender, "Fernsehzeit in h/Woche" = tv_time, "besitzt ein Smartphone" = smartphone)
 
 Children[Children$Age < 8, c("Age", "TV")]
 mean(Children[Children$Smartphone == "Yes", "TV"])
@@ -96,4 +96,5 @@ mean(Children[Children$Smartphone == "Yes", "TV"])
 ```{r}
 StudData <- data.frame(read.csv("data/BeispielStud.csv"))
 StudData$Interesse <- ordered(StudData$Interesse, levels = c("sehr hoch", "hoch", "mittel", "gering"))
+StudData[order(StudData$Interesse),]
 ```
