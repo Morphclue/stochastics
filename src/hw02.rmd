@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Homework 01"
 output:
 pdf_document: default
@@ -31,11 +31,33 @@ sum(2^(-k))
 
 ## 1.8.b
 ```{r}
-family <- ordered(c("Eltern", "Enkel", "Kinder", "Großeltern", "Kinder", "Enkel"),
-                  levels = c("Enkel", "Kinder", "Eltern", "Großeltern")) # ordinal
+family <- ordered(c("Eltern", "Enkel", "Kinder", "Grosseltern", "Kinder", "Enkel"),
+                  levels = c("Enkel", "Kinder", "Eltern", "Grosseltern")) # ordinal
 companies <- c("Google", "Apple", "Amazon", "SAP", "Disney", "Netflix") # nominal
 numbers <- c(75, 63.5, 53, 89, 113, 75) # quantitative
 sizes <- ordered("riesig", "klein", "groß", "winzig", "normal", "gigantisch",
                  levels = c("winzig", "klein", "normal", "groß", "riesig", "gigantisch")) # ordinal
 colors <- c("rot", "blau", "violett", "orange", "gelb", "grün") # nominal
+```
+
+## 1.9
+```{r}
+# 1.9.a
+age <- c("35-44", "25-34", "18-24", "45-54", "35-44", "35-44", "35-44", "25-34")
+job <- c("Krankenpfleger:in", "Krankenpfleger:in", "Hebamme/Geburtshelfer", "Aerztin/Arzt",
+         "Aerztin/Arzt", "Krankenpfleger:in", "Krankenpfleger:in", "Aerztin/Arzt")
+height <- c(175, 182, 169, 196, 168, 170, 156, 165)
+weight <- c(80, 75, 62, 85, 79, 90, 65, 60)
+df <- data.frame(age, job, height, weight)
+
+# 1.9.b
+df[df$age == "35-44",]
+
+# 1.9.c
+df$bmi <- df$weight / (df$height / 100)^2
+df <- df[, c(1:2, 5, 3:4)]
+
+# 1.9.d
+mean(df$bmi)
+mean(df[df$age == "35-44",]$bmi)
 ```
