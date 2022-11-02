@@ -1,0 +1,30 @@
+---
+title: "Homework 01"
+output:
+pdf_document: default
+---
+
+```{r setup, include=FALSE, chache = F}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(error = TRUE)
+```
+
+\let\OldRule\rule
+\renewcommand{\rule}[2]{\OldRule{\linewidth}{#2}}
+
+----------
+
+# Task 1
+
+## 1.8
+
+## 1.8.a
+```{r}
+x <- 5
+(5 * x^2 - 2 * x + 1)^10
+sqrt((5 * x)^5 + (3 * x)^3)
+log(2^x + exp(3 * x)^3)
+sin(exp(3 * cos(x^2)))
+k <- 1:1000
+sum(2^(-k))
+```
