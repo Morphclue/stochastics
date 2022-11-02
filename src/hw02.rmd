@@ -1,4 +1,4 @@
----
+﻿---
 title: "Homework 01"
 output:
 pdf_document: default
@@ -27,4 +27,15 @@ log(2^x + exp(3 * x)^3)
 sin(exp(3 * cos(x^2)))
 k <- 1:1000
 sum(2^(-k))
+```
+
+## 1.8.b
+```{r}
+family <- ordered(c("Eltern", "Enkel", "Kinder", "Großeltern", "Kinder", "Enkel"),
+                  levels = c("Enkel", "Kinder", "Eltern", "Großeltern")) # ordinal
+companies <- c("Google", "Apple", "Amazon", "SAP", "Disney", "Netflix") # nominal
+numbers <- c(75, 63.5, 53, 89, 113, 75) # quantitative
+sizes <- ordered("riesig", "klein", "groß", "winzig", "normal", "gigantisch",
+                 levels = c("winzig", "klein", "normal", "groß", "riesig", "gigantisch")) # ordinal
+colors <- c("rot", "blau", "violett", "orange", "gelb", "grün") # nominal
 ```
