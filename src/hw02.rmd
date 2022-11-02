@@ -61,3 +61,17 @@ df <- df[, c(1:2, 5, 3:4)]
 mean(df$bmi)
 mean(df[df$age == "35-44",]$bmi)
 ```
+
+# 1.10
+```{r}
+# 1.10.a
+survey.adelaide <- read.csv("data/Example0.5.csv")
+
+# 1.10.b
+str(survey.adelaide) # shows the table head and the data type of each column
+head(survey.adelaide) # shows the head and the first 6 rows (tail() would show the last 6)
+summary(survey.adelaide) # shows the summary of the data (min, max, mean, median, etc.)
+
+# 1.10.c
+mean(survey.adelaide$Wr.Hnd[survey.adelaide$Smoke != "Never"], na.rm = TRUE)
+```
