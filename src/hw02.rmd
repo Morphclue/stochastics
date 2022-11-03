@@ -48,7 +48,7 @@ job <- c("Krankenpfleger:in", "Krankenpfleger:in", "Hebamme/Geburtshelfer", "Aer
          "Aerztin/Arzt", "Krankenpfleger:in", "Krankenpfleger:in", "Aerztin/Arzt")
 height <- c(175, 182, 169, 196, 168, 170, 156, 165)
 weight <- c(80, 75, 62, 85, 79, 90, 65, 60)
-df <- data.frame(age, job, height, weight)
+df <- data.frame("Altersgruppe"=age, "Beruf"=job, "Groesse in cm"=height, "Gewicht in kg"=weight, check.names = FALSE)
 
 # 1.9.b
 df[df$age == "35-44",]
