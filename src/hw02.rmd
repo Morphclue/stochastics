@@ -33,11 +33,11 @@ sum(2^(-k))
 ```{r}
 family <- ordered(c("Eltern", "Enkel", "Kinder", "Grosseltern", "Kinder", "Enkel"),
                   levels = c("Enkel", "Kinder", "Eltern", "Grosseltern")) # ordinal
-companies <- c("Google", "Apple", "Amazon", "SAP", "Disney", "Netflix") # nominal
+companies <- factor(c("Google", "Apple", "Amazon", "SAP", "Disney", "Netflix")) # nominal
 numbers <- c(75, 63.5, 53, 89, 113, 75) # quantitative
 sizes <- ordered("riesig", "klein", "groß", "winzig", "normal", "gigantisch",
                  levels = c("winzig", "klein", "normal", "groß", "riesig", "gigantisch")) # ordinal
-colors <- c("rot", "blau", "violett", "orange", "gelb", "grün") # nominal
+colors <- factor(c("rot", "blau", "violett", "orange", "gelb", "grün")) # nominal
 ```
 
 ## 1.9
