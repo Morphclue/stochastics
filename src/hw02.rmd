@@ -35,9 +35,9 @@ family <- ordered(c("Eltern", "Enkel", "Kinder", "Grosseltern", "Kinder", "Enkel
                   levels = c("Enkel", "Kinder", "Eltern", "Grosseltern")) # ordinal
 companies <- factor(c("Google", "Apple", "Amazon", "SAP", "Disney", "Netflix")) # nominal
 numbers <- c(75, 63.5, 53, 89, 113, 75) # quantitative
-sizes <- ordered("riesig", "klein", "groß", "winzig", "normal", "gigantisch",
-                 levels = c("winzig", "klein", "normal", "groß", "riesig", "gigantisch")) # ordinal
-colors <- factor(c("rot", "blau", "violett", "orange", "gelb", "grün")) # nominal
+sizes <- ordered(c("riesig", "klein", "gross", "winzig", "normal", "gigantisch"),
+                 levels = c("winzig", "klein", "normal", "gross", "riesig", "gigantisch")) # ordinal
+colors <- factor(c("rot", "blau", "violett", "orange", "gelb", "gruen")) # nominal
 ```
 
 ## 1.9
@@ -48,7 +48,7 @@ job <- c("Krankenpfleger:in", "Krankenpfleger:in", "Hebamme/Geburtshelfer", "Aer
          "Aerztin/Arzt", "Krankenpfleger:in", "Krankenpfleger:in", "Aerztin/Arzt")
 height <- c(175, 182, 169, 196, 168, 170, 156, 165)
 weight <- c(80, 75, 62, 85, 79, 90, 65, 60)
-df <- data.frame("Altersgruppe"=age, "Beruf"=job, "Groesse in cm"=height, "Gewicht in kg"=weight, check.names = FALSE)
+df <- data.frame("Altersgruppe" = age, "Beruf" = job, "Groesse in cm" = height, "Gewicht in kg" = weight, check.names = FALSE)
 
 # 1.9.b
 df[df$"Altersgruppe" == "35-44",]
