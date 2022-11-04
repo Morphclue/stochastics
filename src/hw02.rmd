@@ -51,15 +51,15 @@ weight <- c(80, 75, 62, 85, 79, 90, 65, 60)
 df <- data.frame("Altersgruppe"=age, "Beruf"=job, "Groesse in cm"=height, "Gewicht in kg"=weight, check.names = FALSE)
 
 # 1.9.b
-df[df$age == "35-44",]
+df[df$"Altersgruppe" == "35-44",]
 
 # 1.9.c
-df$bmi <- df$weight / (df$height / 100)^2
+df$bmi <- df$"Gewicht in kg" / (df$"Groesse in cm" / 100)^2
 df <- df[, c(1:2, 5, 3:4)]
 
 # 1.9.d
 mean(df$bmi)
-mean(df[df$age == "35-44",]$bmi)
+mean(df[df$"Altersgruppe" == "35-44",]$bmi)
 ```
 
 # 1.10
