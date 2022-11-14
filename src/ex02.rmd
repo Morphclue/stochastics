@@ -1,7 +1,7 @@
 ---
 title: "Exercise 02"
 output:
-    pdf_document: default
+pdf_document: default
 ---
 
 ```{r setup, include=FALSE, chache = F}
@@ -25,4 +25,14 @@ speed <- c(75.5, 68.2, 65.3, 60.1, 80.9, 100.0, 87.0, 70.2, 72.5, 69.6)
 
 df <- data.frame(label, persons, speed)
 df
+```
+
+# Task 2.1.a
+```{r}
+barplot(table(df$label), main = "Absolute frequency of car labels", xlab = "Car label", ylab = "Absolute frequency")
+barplot(table(df$label) / length(df$label), main = "Relative frequency of car labels", xlab = "Car label", ylab = "Relative frequency")
+barplot(table(df$persons), main = "Absolute frequency of persons", xlab = "Number of persons", ylab = "Absolute frequency")
+barplot(table(df$persons) / length(df$persons), main = "Relative frequency of persons", xlab = "Number of persons", ylab = "Relative frequency")
+barplot(table(df$speed), main = "Absolute frequency of speed", xlab = "Speed", ylab = "Absolute frequency")
+barplot(table(df$speed) / length(df$speed), main = "Relative frequency of speed", xlab = "Speed", ylab = "Relative frequency")
 ```
