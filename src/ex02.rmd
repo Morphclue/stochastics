@@ -14,3 +14,15 @@ knitr::opts_chunk$set(error = TRUE)
 \renewcommand{\rule}[2]{\OldRule{\linewidth}{#2}}
 
 ----------
+
+# Task 2
+
+# Task 2.1
+```{r}
+label <- factor(c("HR", "KS", "KS", "GOE", "KS", "ESW", "HR", "KS", "KS", "KS"))
+persons <- c(4, 2, 1, 5, 1, 2, 3, 1, 2, 1)
+speed <- c(75.5, 68.2, 65.3, 60.1, 80.9, 100.0, 87.0, 70.2, 72.5, 69.6)
+
+df <- data.frame(label, persons, speed)
+df
+```
