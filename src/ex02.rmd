@@ -36,3 +36,13 @@ barplot(table(df$persons) / length(df$persons), main = "Relative frequency of pe
 barplot(table(df$speed), main = "Absolute frequency of speed", xlab = "Speed", ylab = "Absolute frequency")
 barplot(table(df$speed) / length(df$speed), main = "Relative frequency of speed", xlab = "Speed", ylab = "Relative frequency")
 ```
+
+# Task 2.1.b
+```{r}
+# TODO: Import image from file with handdrawn diagram
+```
+
+# Task 2.1.c
+```{r}
+plot(ecdf(df$persons), main = "Empirical cumulative distribution function of persons", xlab = "Number of persons", ylab = "ECDF")
+```
