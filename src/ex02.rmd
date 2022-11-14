@@ -1,7 +1,6 @@
 ---
 title: "Exercise 02"
-output:
-pdf_document: default
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE, chache = F}
@@ -29,12 +28,24 @@ df
 
 # Task 2.1.a
 ```{r}
-barplot(table(df$label), main = "Absolute frequency of car labels", xlab = "Car label", ylab = "Absolute frequency")
-barplot(table(df$label) / length(df$label), main = "Relative frequency of car labels", xlab = "Car label", ylab = "Relative frequency")
-barplot(table(df$persons), main = "Absolute frequency of persons", xlab = "Number of persons", ylab = "Absolute frequency")
-barplot(table(df$persons) / length(df$persons), main = "Relative frequency of persons", xlab = "Number of persons", ylab = "Relative frequency")
-barplot(table(df$speed), main = "Absolute frequency of speed", xlab = "Speed", ylab = "Absolute frequency")
-barplot(table(df$speed) / length(df$speed), main = "Relative frequency of speed", xlab = "Speed", ylab = "Relative frequency")
+barplot(table(df$label),
+        main = "Absolute frequency of car labels",
+        xlab = "Car label", ylab = "Absolute frequency")
+barplot(table(df$label) / length(df$label),
+        main = "Relative frequency of car labels",
+        xlab = "Car label", ylab = "Relative frequency")
+barplot(table(df$persons),
+        main = "Absolute frequency of persons",
+        xlab = "Number of persons", ylab = "Absolute frequency")
+barplot(table(df$persons) / length(df$persons),
+        main = "Relative frequency of persons",
+        xlab = "Number of persons", ylab = "Relative frequency")
+hist(df$speed,
+     main = "Absolute frequency of speed",
+     xlab = "Speed", ylab = "Absolute frequency", breaks = 10)
+hist(df$speed / length(df$speed),
+     main = "Relative frequency of speed",
+     xlab = "Speed", ylab = "Relative frequency", breaks = 10)
 ```
 
 # Task 2.1.b
@@ -44,5 +55,30 @@ barplot(table(df$speed) / length(df$speed), main = "Relative frequency of speed"
 
 # Task 2.1.c
 ```{r}
-plot(ecdf(df$persons), main = "Empirical cumulative distribution function of persons", xlab = "Number of persons", ylab = "ECDF")
+plot(ecdf(df$persons),
+     main = "Empirical cumulative distribution function of persons",
+     xlab = "Number of persons", ylab = "ECDF")
+```
+
+# Task 2.1.d
+The data in the dataframe were already created as frequency tables in task 2.1.a, which is why they are deliberately omitted here.
+Likewise, it makes little sense to generate additional bar plots here because the absolute and relative frequency plots are already bar plots.
+For this reason, only the staff diagram, histogram, and distribution function are shown below.
+```{r}
+plot(table(df$label), type = "h",
+     main = "Staff diagram of car labels",
+     xlab = "Car label", ylab = "Absolute frequency")
+plot(table(df$persons), type = "h",
+     main = "Staff diagram of persons",
+     xlab = "Number of persons", ylab = "Absolute frequency")
+plot(table(df$speed), type = "h",
+     main = "Staff diagram of speed",
+     xlab = "Speed", ylab = "Absolute frequency")
+hist(df$persons,
+     main = "Histogram of persons",
+     xlab = "Number of persons", ylab = "Absolute frequency")
+hist(df$speed,
+     main = "Histogram of speed",
+     xlab = "Speed", ylab = "Absolute frequency")
+# TODO: distribution function
 ```
