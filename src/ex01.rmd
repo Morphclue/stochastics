@@ -1,0 +1,101 @@
+---
+title: "Exercise 01"
+output:
+    pdf_document: default
+---
+
+```{r setup, include=FALSE, chache = F}
+knitr::opts_knit$set(root.dir = normalizePath(".."))
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(error = TRUE)
+```
+
+\let\OldRule\rule
+\renewcommand{\rule}[2]{\OldRule{\linewidth}{#2}}
+
+----------
+
+# Task 1
+
+## Task 1.5
+
+### Task 1.5.a
+```{r}
+x <- c(1, 10, 100, 1000)
+city <- c("Frankfurt", "Berlin", "New York", "Kassel")
+z <- c(0, 1, 2, 3)
+```
+
+### Task 1.5.b
+```{r}
+7:12
+12:1
+seq(-1, 1, 0.5)
+seq(500, 2500, 500)
+rep(-2:2, 2)
+c(1.0:5.0, seq(5.0, 5.5, 0.1))
+```
+
+### Task 1.5.c
+```{r}
+x <- 10:8 # Numbers from 10 to 8
+y <- seq(0.0, 1.0, 0.2) # Numbers from 0.0 to 1.0 with step 0.2
+x + y # Adds x and y element-wise (x repeats itself)
+x * y # Multiplies x and y element-wise (x repeats itself)
+x^2 + 2 # Mulitples each element of x with itself and adds 2
+n <- length(x + y) # Length of x+y array
+sum(x + y) / n # Mean of x+y array
+```
+
+### Task 1.5.d
+```{r}
+x <- seq(0, 50, 2)
+y <- 50:1
+x[10] # 10th element of x
+y[c(1, 3, 10)] # 1st, 3rd and 10th element of y
+x[1:4] # First 4 elements of x
+x[x > 45] # Elements of x greater than 45
+x[x > 10 & x <= 20] # Elements of x greater than 10 and less or equal to 20
+y[y == 5 | y > 45 | y < 3] # Elements of y equal to 5 or greater than 45 or less than 3
+```
+
+## Task 1.6
+
+### Task 1.6.a
+```{r}
+names <- factor(c("Michaela", "Alexander", "Nadja", "Alina", "Ricarda", "Omar"))
+age <- c(20, 20, 19, 21, 21, 20)
+numbers <- c(123451, 123452, 123453, 123454, 123455, 123456)
+grade <- ordered(c("A", "C", "C", "B-", "F", "A-"), levels = c("F", "C", "B-", "A-", "A"))
+passed <- grade > "F"
+Students <- data.frame(Name = names, Alter = age, Matr.nr = numbers, Note = grade, Pruefung.bestanden = passed)
+Students
+
+Students[1, 3] # 3rd element of 1st row
+Students[2,] # 2nd row
+Students[1:3, c(1, 4)] # 1st to 3rd row and 1st and 4th column
+Students[, 4] # 4th column
+Students$Note # 4th column
+Students[grade > "C",] # Rows with grade greater than C
+```
+
+### Task 1.6.b
+```{r}
+age <- c(6, 8, 7, 10, 6, 7, 7, 9)
+gender <- c("Male", "Male", "Female", "Male", "Female", "Female", "Female", "Male")
+tv_time <- c(5, 10, 3, 15, 8, 9, 13, 8)
+smartphone <- c("No", "Yes", "No", "Yes", "Yes", "No", "Yes", "Yes")
+Children <- data.frame("Alter" = age, "Geschlecht" = gender, "Fernsehzeit in h/Woche" = tv_time, "besitzt ein Smartphone" = smartphone, check.names = FALSE)
+
+Children[Children$"Alter" < 8, c("Alter", "Fernsehzeit in h/Woche")]
+mean(Children[Children$`besitzt ein Smartphone` == "Yes", "Fernsehzeit in h/Woche"])
+```
+
+## Task 1.7
+
+### Task 1.7.a
+```{r}
+StudData <- data.frame(read.csv("data/BeispielStud.csv"))
+StudData$Interesse <- ordered(StudData$Interesse, levels = c("sehr hoch", "hoch", "mittel", "gering"))
+StudData[order(StudData$Interesse),]
+```
