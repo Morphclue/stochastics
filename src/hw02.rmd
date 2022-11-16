@@ -33,3 +33,12 @@ barplot(table(auto$Origin),
         xlab = "Origin",
         ylab = "Absolute frequency")
 ```
+
+The estimated value in euros should be categorized into different price classes, otherwise all frequencies would be 1 in a bar or column chart. Since a class width is used, a histogram is suitable for graphical representation.
+```{r}
+hist(auto$Price,
+     main = "Histogram - Price of the cars",
+     xlab = "Price in euros",
+     ylab = "Absolute frequency",
+     breaks = 2)
+```
