@@ -23,6 +23,7 @@ names(auto) <- c("No", "Origin", "Price", "Consumption",
 auto$Origin <- factor(auto$Origin,
                       levels = c(1, 2, 3, 4),
                       labels = c("GER", "AUT", "CH", "FR"))
+auto
 ```
 
 ### Task 2.7.a
@@ -42,3 +43,22 @@ hist(auto$Price,
      ylab = "Absolute frequency",
      breaks = 2)
 ```
+
+### Task 2.7.b
+For both characteristics, number of damages in the interior and number of damages on the car body, bar diagrams are suitable to mark missing values.
+```{r}
+plot(table(auto$"Interior damage") / nrow(auto),
+     main = "Bar chart - Interior damage of the cars",
+     xlab = "Interior damage",
+     ylab = "Relative frequency",
+     type = "h")
+```
+
+```{r}
+plot(table(auto$"Body damage") / nrow(auto),
+     main = "Bar chart - Body damage of the cars",
+     xlab = "Body damage",
+     ylab = "Relative frequency",
+     type = "h")
+```
+
