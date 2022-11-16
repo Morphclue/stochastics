@@ -62,3 +62,20 @@ plot(table(auto$"Body damage") / nrow(auto),
      type = "h")
 ```
 
+### Task 2.7.c
+The characteristics fuel consumption, damage to the interior, damage to the body and tank volume are shown here together as a boxplot, since they have values that are similar to each other. The quantitative values for price are presented as boxplots together with the nominal values based on the country of origin.
+```{r}
+boxplot(auto$Price ~ auto$Origin,
+        main = "Boxplot - Price of the cars",
+        xlab = "Origin",
+        ylab = "Price in euros")
+```
+
+```{r}
+boxplot(auto[, 4:7],
+        main = "Boxplots - Quantitative characteristics",
+        xlab = "Characteristic",
+        ylab = "Value",
+        names = c("Consumption", "Interior damage",
+                  "Body damage", "Tank"))
+```
