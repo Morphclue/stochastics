@@ -1,0 +1,15 @@
+---
+title: "Homework 02"
+output: pdf_document
+---
+
+```{r setup, include=FALSE, chache = F}
+knitr::opts_knit$set(root.dir = normalizePath(".."))
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(error = TRUE)
+```
+
+\let\OldRule\rule
+\renewcommand{\rule}[2]{\OldRule{\linewidth}{#2}}
+
+----------
