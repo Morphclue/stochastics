@@ -13,3 +13,23 @@ knitr::opts_chunk$set(error = TRUE)
 \renewcommand{\rule}[2]{\OldRule{\linewidth}{#2}}
 
 ----------
+
+# Task 2
+## Task 2.7
+```{r}
+auto <- read.table("data/auto.txt", header = TRUE)
+names(auto) <- c("No", "Origin", "Price", "Consumption",
+                 "Interior damage", "Body damage", "Tank")
+auto$Origin <- factor(auto$Origin,
+                      levels = c(1, 2, 3, 4),
+                      labels = c("GER", "AUT", "CH", "FR"))
+```
+
+### Task 2.7.a
+Characteristic $X_1$ should be displayed as a bar chart, since these are nominal values.
+```{r}
+barplot(table(auto$Origin),
+        main = "Bar chart - Country of origin of the cars",
+        xlab = "Origin",
+        ylab = "Absolute frequency")
+```
