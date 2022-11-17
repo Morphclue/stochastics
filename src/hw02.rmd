@@ -45,19 +45,21 @@ hist(auto$Price,
 ```
 
 ### Task 2.7.b
-For both characteristics, number of damages in the interior and number of damages on the car body, bar diagrams are suitable to mark missing values.
+A histogram is suitable for the consumption, since it is a quantitative variable with many values.
+```{r}
+hist(auto$Consumption,
+     main = "Histogram - Consumption of the cars",
+     xlab = "Consumption in liters",
+     ylab = "Relative frequency",
+     breaks = 5,
+     freq = FALSE)
+```
+
+A bar diagram is suitable for the number of damages in the interior, because it can easily represent the number of missing values.
 ```{r}
 plot(table(auto$"Interior damage") / nrow(auto),
      main = "Bar chart - Interior damage of the cars",
      xlab = "Interior damage",
-     ylab = "Relative frequency",
-     type = "h")
-```
-
-```{r}
-plot(table(auto$"Body damage") / nrow(auto),
-     main = "Bar chart - Body damage of the cars",
-     xlab = "Body damage",
      ylab = "Relative frequency",
      type = "h")
 ```
