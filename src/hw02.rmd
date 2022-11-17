@@ -30,7 +30,7 @@ auto
 Characteristic $X_1$ should be displayed as a bar chart, since these are nominal values.
 ```{r}
 barplot(table(auto$Origin),
-        main = "Bar chart - Country of origin of the cars",
+        main = "Bar chart - Country of origin",
         xlab = "Origin",
         ylab = "Absolute frequency")
 ```
