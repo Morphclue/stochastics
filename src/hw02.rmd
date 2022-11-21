@@ -29,10 +29,7 @@ auto
 ### Task 2.7.a
 Characteristic $X_1$ should be displayed as a bar chart, since these are nominal values.
 ```{r}
-barplot(table(auto$Origin),
-        main = "Bar chart - Country of origin",
-        xlab = "Origin",
-        ylab = "Absolute frequency")
+pie(table(auto$Origin), main = "Country of origin", col = rainbow(4))
 ```
 
 The estimated value in euros should be categorized into different price classes, otherwise all frequencies would be 1 in a bar or column chart. Since a class width is used, a histogram is suitable for graphical representation.
