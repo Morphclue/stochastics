@@ -27,7 +27,8 @@ auto
 ```
 
 ### Task 2.7.a
-Characteristic $X_1$ should be displayed as a bar chart, since these are nominal values.
+Characteristic $X_1$ should be displayed as a pie chart, since these are nominal values.
+It also provides a good overview of the distribution of the values.
 ```{r}
 pie(table(auto$Origin), main = "Country of origin", col = rainbow(4))
 ```
