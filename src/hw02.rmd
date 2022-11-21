@@ -74,10 +74,17 @@ boxplot(auto$Price ~ auto$Origin,
 ```
 
 ```{r}
-boxplot(auto[, 4:7],
+boxplot(auto[, 4:6],
         main = "Boxplots - Quantitative characteristics",
         xlab = "Characteristic",
         ylab = "Value",
         names = c("Consumption", "Interior damage",
-                  "Body damage", "Tank"))
+                  "Body damage"))
+```
+
+```{r}
+boxplot(auto$Tank,
+        main = "Boxplot - Tank volume of the cars",
+        xlab = "Tank volume",
+        ylab = "Value")
 ```
