@@ -24,7 +24,7 @@ p <- c(0.5, 0.75, 0.3)
 
 for (i in 1:3) {
   dist <- rbinom(1000, n[i], p[i])
-  plot(table(dist), main = paste("n =", n[i], "p =", p[i]), xlab = expression(k), ylab = expression(p(k)))
+  plot(table(dist)/1000, main = paste("n =", n[i], "p =", p[i]), xlab = expression(k), ylab = expression(p(k)))
 }
 ```
 
@@ -35,8 +35,21 @@ par(mfrow = c(1, 2))
 
 for (i in 1:2) {
   dist <- rgeom(1000, p[i])
-    plot(table(dist), main = paste("p =", p[i]), xlab = expression(k), ylab = expression(p(k)))
+  plot(table(dist)/1000, main = paste("p =", p[i]), xlab = expression(k), ylab = expression(p(k)))
 }
 ```
 
+### 4.8.c
+```{r}
+N <- c(12, 20)
+K <- c(7, 15)
+n <- c(4, 10)
+par(mfrow = c(1, 2))
 
+for (i in 1:2) {
+  dist <- rhyper(1000, N[i], K[i], n[i])
+  plot(table(dist)/1000,
+       main = paste("N =", N[i], "K =", K[i], "n =", n[i]),
+       xlab = expression(k), ylab = expression(p(k)))
+}
+```
