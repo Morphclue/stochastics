@@ -13,3 +13,21 @@ knitr::opts_chunk$set(error = TRUE)
 \renewcommand{\rule}[2]{\OldRule{\linewidth}{#2}}
 
 ----------
+
+# Task 5
+
+## Task 5.5
+
+```{r}
+a <- runif(1000, 1, 4)
+hist(a, breaks = 20, main="Histogram of a", xlab="a", ylab="Frequency", density = 20)
+anorm <- dnorm(seq(min(a), max(a), length.out = length(a)), mean = mean(a), sd = sd(a))
+lines(seq(min(a), max(a), length.out = length(a)), anorm * 20, col = "red", lwd = 2)
+```
+
+```{r}
+b <- runif(1000, 1, 4)
+hist(b, breaks = 20, main="Histogram of b", xlab="b", ylab="Frequency", density = 20)
+bnorm <- dnorm(seq(min(b), max(b), length.out = length(b)), mean = mean(a), sd = sd(a))
+lines(seq(min(a), max(a), length.out = length(a)), bnorm * 20, col = "red", lwd = 2)
+```
