@@ -1,0 +1,140 @@
+---
+title: "Homework 05"
+output: pdf_document
+---
+
+```{r setup, include=FALSE, chache = F}
+knitr::opts_knit$set(root.dir = normalizePath(".."))
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(error = TRUE)
+```
+
+\let\OldRule\rule
+\renewcommand{\rule}[2]{\OldRule{\linewidth}{#2}}
+
+----------
+
+# Task 5
+
+## Task 5.8
+
+### Task 5.8.a
+```{r}
+x <- rnorm(1000, mean = 0, sd = 1)
+y <- rnorm(1000, mean = 3, sd = 3)
+
+hist(x,
+     main = "Histogram of x",
+     freq = FALSE,
+     xlab = "x",
+     ylab = "Frequency",
+     col = "red",
+     breaks = 20
+)
+lines(density(x), col = "green", lwd = 3)
+hist(y,
+     main = "Histogram of y",
+     freq = FALSE,
+     xlab = "y",
+     ylab = "Frequency",
+     col = "blue",
+     breaks = 20
+)
+lines(density(y), col = "violet", lwd = 3)
+```
+
+### Task 5.8.b
+```{r}
+# rexp takes 1/lambda as a rate parameter
+x <- rexp(1000, rate = 4)
+y <- rexp(1000, rate = 1)
+z <- rexp(1000, rate = 0.5)
+
+hist(x,
+     main = "Histogram of x",
+     freq = FALSE,
+     xlab = "x",
+     ylab = "Frequency",
+     col = "red",
+     breaks = 20
+)
+lines(density(x), col = "green", lwd = 3)
+hist(y,
+     main = "Histogram of y",
+     freq = FALSE,
+     xlab = "y",
+     ylab = "Frequency",
+     col = "blue",
+     breaks = 20
+)
+lines(density(y), col = "violet", lwd = 3)
+hist(z,
+     main = "Histogram of z",
+     freq = FALSE,
+     xlab = "z",
+     ylab = "Frequency",
+     col = "yellow",
+     breaks = 20
+)
+lines(density(z), col = "orange", lwd = 3)
+```
+
+### Task 5.8.c
+```{r}
+x <- rt(1000, df = 2)
+y <- rt(1000, df = 100)
+
+hist(x,
+     main = "Histogram of x",
+     freq = FALSE,
+     xlab = "x",
+     ylab = "Frequency",
+     col = "red",
+     breaks = 20
+)
+lines(density(x), col = "green", lwd = 3)
+hist(y,
+     main = "Histogram of y",
+     freq = FALSE,
+     xlab = "y",
+     ylab = "Frequency",
+     col = "blue",
+     breaks = 20
+)
+lines(density(y), col = "violet", lwd = 3)
+```
+
+### Task 5.8.d
+```{r}
+x <- rchisq(1000, df = 1)
+y <- rchisq(1000, df = 3)
+z <- rchisq(1000, df = 6)
+
+hist(x,
+     main = "Histogram of x",
+     freq = FALSE,
+     xlab = "x",
+     ylab = "Frequency",
+     col = "red",
+     breaks = 20
+)
+lines(density(x), col = "green", lwd = 3)
+hist(y,
+     main = "Histogram of y",
+     freq = FALSE,
+     xlab = "y",
+     ylab = "Frequency",
+     col = "blue",
+     breaks = 20
+)
+lines(density(y), col = "violet", lwd = 3)
+hist(z,
+     main = "Histogram of z",
+     freq = FALSE,
+     xlab = "z",
+     ylab = "Frequency",
+     col = "yellow",
+     breaks = 20
+)
+lines(density(z), col = "orange", lwd = 3)
+```
